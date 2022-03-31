@@ -1,4 +1,5 @@
 import chipwhisperer as cw
+import time
 
 scope = cw.scope()
 
@@ -20,3 +21,34 @@ scope.clock.reset_adc()
 assert (scope.clock.adc_locked), "ADC failed to lock"
 
 proj = cw.project("desired_path.cwp", overwrite=True)
+
+n_traces = 5000
+ktp = cw.ktp.Basic()
+key, text = ktp.next()
+target.fpga_write(target.REG_CRYPT_KEY, key)
+
+for i in range(n_traces):
+    scope.arm()
+
+    target.fpga_write(target.REG_CRYPT_TEXTIN, text)
+
+    key, text = ktp.next()
+
+    target.fpga_write(target.REG_USER_LED, [0x01])
+    target.usb_trigger.toggle()
+
+    ret = scope.capture()
+
+    if ret:
+        print("ERROR: Capture timedout")
+        continue
+    
+    output = target.fpga_read(target.REG_CRYPT_CIPHEROUT, 16)
+    wave = cw.get_last_trace()
+    trace = cw.Trace(wave, text, output, key)
+
+    proj.traces.append(trace)
+
+proj.save()
+
+
