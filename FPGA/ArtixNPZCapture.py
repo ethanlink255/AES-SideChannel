@@ -79,17 +79,9 @@ store_key = np.array(store_key)
 #print(store_key.shape)
 #print(store_key)
 
-if 'stm32f3' == board:
-    attack_window = (1200, 2200)
-elif 'xmega' == board:
-    attack_window = (1800, 2800)
-else:
-    raise
-print('attack_window: ', attack_window)
-
 import os
-dataDir = ''
+dataDir = './'
 os.makedirs(dataDir, exist_ok=True)
 outpath = os.path.join(dataDir, 'val_diff_key.npz')
-np.savez(outpath, trace_mat=traces, textin_mat=textin, key=store_key, attack_window=attack_window)
+np.savez(outpath, trace_mat=traces, textin_mat=textin, key=store_key)
 
