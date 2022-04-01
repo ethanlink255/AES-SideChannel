@@ -5,6 +5,8 @@ import time
 import numpy as np
 import time
 from Crypto.Cipher import AES
+import matplotlib.pylab as plt
+from matplotlib.pyplot import MultipleLocator
 
 scope = cw.scope()
 
@@ -39,7 +41,7 @@ ktp = cw.ktp.Basic()
 
 traces = []
 textin = []
-keys = []
+#keys = []
 N = 5000 
 
 key, text = ktp.next()
@@ -47,9 +49,9 @@ cipher = AES.new(bytes(key), AES.MODE_ECB)
 
 for i in range(N):
   
-    key, text = ktp.next()
+    _, text = ktp.next()
     textin.append(text)
-    keys.append(key)
+    #keys.append(key)
     
     ret = cw.capture_trace(scope, target, text, key)
     if not ret:
@@ -60,9 +62,34 @@ for i in range(N):
         
     traces.append(ret.wave)
 
+x_locator = MultipleLocator(500)
+ax = plt.gca()
+ax.xaxis.set_major_locator(x_locator)
 
-p = figure(plot_width=800)
+plt.plot(traces[1], color='r') 
+plt.show()
 
-xrange = range(len(traces[0]))
-p.line(xrange, traces[0], line_color="red")
-show(p)
+plt.savefig("capturetraces.png")
+
+import numpy as np
+traces = np.float32(traces)
+
+store_key = list(key)
+store_key = np.array(store_key)
+#print(store_key.shape)
+#print(store_key)
+
+if 'stm32f3' == board:
+    attack_window = (1200, 2200)
+elif 'xmega' == board:
+    attack_window = (1800, 2800)
+else:
+    raise
+print('attack_window: ', attack_window)
+
+import os
+dataDir = ''
+os.makedirs(dataDir, exist_ok=True)
+outpath = os.path.join(dataDir, 'val_diff_key.npz')
+np.savez(outpath, trace_mat=traces, textin_mat=textin, key=store_key, attack_window=attack_window)
+
