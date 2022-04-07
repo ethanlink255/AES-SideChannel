@@ -279,7 +279,7 @@ begin : sbox_update
 		S7 = ~(L6 ^ L23); /* S7 = L6 # L23 */
 	end
 	
-	S = { S0, S1, S2, S3, S4, S5, S6, S7 };
+	#100 S = { S0, S1, S2, S3, S4, S5, S6, S7 };
 end
 
 endmodule
