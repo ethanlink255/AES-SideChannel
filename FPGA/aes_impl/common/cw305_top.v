@@ -63,6 +63,9 @@ module cw305_top #(
     output wire                         tio_trigger,
     output wire                         tio_clkout,
     input  wire                         tio_clkin
+    
+    //40 pin gpio header round trigger
+    ,output reg                         trigger_out
 
     // Block Interface to Crypto Core
 `ifdef USE_BLOCK_INTERFACE
@@ -115,6 +118,9 @@ module cw305_top #(
     reg [22:0] crypt_clk_heartbeat;
     always @(posedge crypt_clk) crypt_clk_heartbeat <= crypt_clk_heartbeat +  23'd1;
     assign led2 = crypt_clk_heartbeat[22];
+    
+    assign trigger_out = 1'b1;
+    
 
 
     cw305_usb_reg_fe #(

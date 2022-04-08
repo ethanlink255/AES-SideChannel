@@ -20,8 +20,8 @@ scope.io.tio2 = "serial_tx"
 scope.io.hs2 = "disabled"
 scope.clock.adc_src = "extclk_x4"
 
-#target = cw.target(scope, cw.targets.CW305,"/path/to/bitstream", force=True)
-target = cw.target(scope, cw.targets.CW305, fpga_id='100t', force=False) #this one is prebuilt
+target = cw.target(scope, cw.targets.CW305, bsfile="/home/ethan/Documents/Git/chipwhisperer/hardware/victims/cw305_artixtarget/fpga/vivado_examples/aes128_verilog/aes128_verilog.runs/impl_100t/cw305_top.bit", force=True)
+#target = cw.target(scope, cw.targets.CW305, fpga_id='100t', force=False) #this one is prebuilt
 
 target.vccint_set(1.0)
 target.pll.pll_enable_set(True)
@@ -42,7 +42,7 @@ ktp = cw.ktp.Basic()
 traces = []
 textin = []
 #keys = []
-N = 5000 
+N = 10000 
 
 key, text = ktp.next()
 cipher = AES.new(bytes(key), AES.MODE_ECB)
@@ -68,7 +68,6 @@ ax.xaxis.set_major_locator(x_locator)
 
 plt.plot(traces[1], color='r') 
 plt.show()
-
 plt.savefig("capturetraces.png")
 
 import numpy as np

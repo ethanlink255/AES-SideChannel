@@ -30,6 +30,9 @@ set_property PACKAGE_PIN M16 [get_ports tio_clkout]
 
 set_property PACKAGE_PIN N14 [get_ports tio_clkin]
 
+######## 40-pin GPIO Header
+set_property PACKAGE_PIN A12 [get_ports trigger_out]
+
 ####### USB Connector
 
 set_property PACKAGE_PIN F5 [get_ports usb_clk]

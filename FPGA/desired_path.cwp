@@ -1,0 +1,10 @@
+[Trace Management]
+tracefile0 = desired_path_data/traces/config_2022.04.07-20.06.24_0.cfg
+enabled0 = True
+[ChipWhisperer]
+[[General Settings]]
+Project Name = Untitled
+Project File Version = 1.00
+Project Author = Unknown
+Program Name = ChipWhisperer
+Program Version = ""

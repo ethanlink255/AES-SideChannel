@@ -1,74 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_35t" LaunchPart="xc7a35tftg256-2" LaunchTime="1602094408">
-  <File Type="BITSTR-BMM" Name="cw305_top_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="cw305_top_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="cw305_top_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="cw305_top_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="cw305_top.tcl"/>
-  <File Type="OPT-TIMING" Name="cw305_top_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="cw305_top_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="cw305_top_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="cw305_top_reports.tcl"/>
-  <File Type="OPT-DRC" Name="cw305_top_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="cw305_top.hwdef"/>
-  <File Type="PWROPT-DCP" Name="cw305_top_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="cw305_top_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="cw305_top_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="cw305_top_placed.dcp"/>
-  <File Type="PLACE-IO" Name="cw305_top_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="cw305_top_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="cw305_top_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="cw305_top_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="cw305_top_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="cw305_top_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="cw305_top_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BGN" Name="cw305_top.bgn"/>
-  <File Type="PLACE-TIMING" Name="cw305_top_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="cw305_top_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="cw305_top.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="cw305_top_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="cw305_top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="cw305_top_postroute_physopt.dcp"/>
   <File Type="PHYSOPT-DCP" Name="cw305_top_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="cw305_top_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="cw305_top.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="cw305_top_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="cw305_top_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="cw305_top_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="cw305_top_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="cw305_top_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="cw305_top_drc_routed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="cw305_top_postplace_pwropt.dcp"/>
+  <File Type="PWROPT-DCP" Name="cw305_top_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="cw305_top_placed.dcp"/>
+  <File Type="OPT-DCP" Name="cw305_top_opt.dcp"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="cw305_top.ltx"/>
-  <File Type="ROUTE-DRC-RPX" Name="cw305_top_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="cw305_top.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="cw305_top_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="cw305_top_methodology_drc_routed.rpx"/>
   <File Type="BITSTR-SYSDEF" Name="cw305_top.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="cw305_top_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="cw305_top_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="cw305_top_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="cw305_top_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="cw305_top_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="cw305_top_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="cw305_top_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="cw305_top_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="cw305_top_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="cw305_top_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="cw305_top_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="cw305_top_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="cw305_top_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="cw305_top_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="cw305_top_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="cw305_top_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="cw305_top_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="cw305_top_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="cw305_top_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="cw305_top.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="cw305_top_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="cw305_top.rbt"/>
+  <File Type="BITSTR-MMI" Name="cw305_top.mmi"/>
+  <File Type="BITSTR-BMM" Name="cw305_top_bd.bmm"/>
   <File Type="BITSTR-NKY" Name="cw305_top.nky"/>
-  <File Type="BG-DRC" Name="cw305_top.drc"/>
-  <File Type="RDI-RDI" Name="cw305_top.vdi"/>
+  <File Type="BITSTR-RBT" Name="cw305_top.rbt"/>
+  <File Type="REPORTS-TCL" Name="cw305_top_reports.tcl"/>
+  <File Type="BITSTR-MSK" Name="cw305_top.msk"/>
+  <File Type="PA-TCL" Name="cw305_top.tcl"/>
+  <File Type="ROUTE-TIMING-PB" Name="cw305_top_timing_summary_routed.pb"/>
+  <File Type="BG-BIN" Name="cw305_top.bin"/>
+  <File Type="BG-BGN" Name="cw305_top.bgn"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="cw305_top_routed_bb.dcp"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="cw305_top.vdi"/>
+  <File Type="BG-DRC" Name="cw305_top.drc"/>
+  <File Type="ROUTE-ERROR-DCP" Name="cw305_top_routed_error.dcp"/>
+  <File Type="BG-BIT" Name="cw305_top.bit"/>
+  <File Type="OPT-HWDEF" Name="cw305_top.hwdef"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="cw305_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DCP" Name="cw305_top_routed.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../cryptosrc/aes_googlevault/aes_core.v">
@@ -163,7 +123,8 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ila_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
 </GenRun>
