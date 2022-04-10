@@ -1,0 +1,413 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sat Apr  9 22:01:03 2022
+# Process ID: 341035
+# Current directory: /home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/vivado_examples/aes128_verilog/aes128_verilog.runs/synth_100t
+# Command line: vivado -log cw305_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cw305_top.tcl
+# Log file: /home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/vivado_examples/aes128_verilog/aes128_verilog.runs/synth_100t/cw305_top.vds
+# Journal file: /home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/vivado_examples/aes128_verilog/aes128_verilog.runs/synth_100t/vivado.jou
+# Running On: ethan-ms7d18, OS: Linux, CPU Frequency: 3600.000 MHz, CPU Physical cores: 8, Host memory: 8151 MB
+#-----------------------------------------------------------
+source cw305_top.tcl -notrace
+Command: synth_design -top cw305_top -part xc7a100tftg256-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tftg256-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 341098
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2607.473 ; gain = 0.000 ; free physical = 286 ; free virtual = 6406
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cw305_top' [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_top.v:32]
+INFO: [Synth 8-6157] synthesizing module 'cw305_usb_reg_fe' [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_usb_reg_fe.v:31]
+	Parameter pADDR_WIDTH bound to: 21 - type: integer 
+	Parameter pBYTECNT_SIZE bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cw305_usb_reg_fe' (1#1) [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_usb_reg_fe.v:31]
+INFO: [Synth 8-6157] synthesizing module 'cw305_reg_aes' [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_reg_aes.v:33]
+	Parameter pADDR_WIDTH bound to: 21 - type: integer 
+	Parameter pBYTECNT_SIZE bound to: 7 - type: integer 
+	Parameter pPT_WIDTH bound to: 128 - type: integer 
+	Parameter pCT_WIDTH bound to: 128 - type: integer 
+	Parameter pKEY_WIDTH bound to: 128 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_reg_aes.v:170]
+INFO: [Synth 8-6157] synthesizing module 'cdc_pulse' [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cdc_pulse.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'cdc_pulse' (2#1) [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cdc_pulse.v:24]
+INFO: [Synth 8-6157] synthesizing module 'USR_ACCESSE2' [/mnt/Vivado/2021.2/scripts/rt/data/unisim_comp.v:109644]
+INFO: [Synth 8-6155] done synthesizing module 'USR_ACCESSE2' (3#1) [/mnt/Vivado/2021.2/scripts/rt/data/unisim_comp.v:109644]
+WARNING: [Synth 8-3848] Net O_cipherin in module/entity cw305_reg_aes does not have driver. [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_reg_aes.v:74]
+INFO: [Synth 8-6155] done synthesizing module 'cw305_reg_aes' (4#1) [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_reg_aes.v:33]
+INFO: [Synth 8-6157] synthesizing module 'clocks' [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/clocks.v:32]
+INFO: [Synth 8-6157] synthesizing module 'BUFGMUX_CTRL' [/mnt/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1211]
+INFO: [Synth 8-6155] done synthesizing module 'BUFGMUX_CTRL' (5#1) [/mnt/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1211]
+INFO: [Synth 8-6157] synthesizing module 'ODDR' [/mnt/Vivado/2021.2/scripts/rt/data/unisim_comp.v:74749]
+INFO: [Synth 8-6155] done synthesizing module 'ODDR' (6#1) [/mnt/Vivado/2021.2/scripts/rt/data/unisim_comp.v:74749]
+INFO: [Synth 8-6157] synthesizing module 'IBUFG' [/mnt/Vivado/2021.2/scripts/rt/data/unisim_comp.v:55688]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFG' (7#1) [/mnt/Vivado/2021.2/scripts/rt/data/unisim_comp.v:55688]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/mnt/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (8#1) [/mnt/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6155] done synthesizing module 'clocks' (9#1) [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/clocks.v:32]
+INFO: [Synth 8-6157] synthesizing module 'aes_core' [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/cryptosrc/aes_googlevault/aes_core.v:36]
+INFO: [Synth 8-6157] synthesizing module 'aes_ks' [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/cryptosrc/aes_googlevault/aes_ks.v:36]
+INFO: [Synth 8-6157] synthesizing module 'aes_sbox' [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/cryptosrc/aes_googlevault/aes_sbox.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'aes_sbox' (10#1) [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/cryptosrc/aes_googlevault/aes_sbox.v:36]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/cryptosrc/aes_googlevault/aes_ks.v:107]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/cryptosrc/aes_googlevault/aes_ks.v:117]
+INFO: [Synth 8-6155] done synthesizing module 'aes_ks' (11#1) [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/cryptosrc/aes_googlevault/aes_ks.v:36]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/cryptosrc/aes_googlevault/aes_core.v:272]
+INFO: [Synth 8-6155] done synthesizing module 'aes_core' (12#1) [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/cryptosrc/aes_googlevault/aes_core.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'cw305_top' (13#1) [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_top.v:32]
+WARNING: [Synth 8-3917] design cw305_top has port led2 driven by constant 1
+WARNING: [Synth 8-3917] design cw305_top has port led3 driven by constant 1
+WARNING: [Synth 8-7129] Port O_cipherin[127] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[126] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[125] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[124] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[123] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[122] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[121] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[120] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[119] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[118] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[117] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[116] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[115] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[114] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[113] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[112] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[111] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[110] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[109] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[108] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[107] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[106] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[105] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[104] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[103] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[102] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[101] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[100] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[99] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[98] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[97] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[96] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[95] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[94] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[93] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[92] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[91] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[90] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[89] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[88] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[87] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[86] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[85] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[84] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[83] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[82] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[81] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[80] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[79] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[78] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[77] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[76] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[75] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[74] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[73] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[72] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[71] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[70] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[69] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[68] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[67] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[66] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[65] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[64] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[63] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[62] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[61] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[60] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[59] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[58] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[57] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[56] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[55] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[54] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[53] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[52] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[51] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[50] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[49] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[48] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[47] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[46] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[45] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[44] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[43] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[42] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[41] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[40] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[39] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[38] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[37] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[36] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[35] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[34] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[33] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[32] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[31] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[30] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[29] in module cw305_reg_aes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port O_cipherin[28] in module cw305_reg_aes is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2607.473 ; gain = 0.000 ; free physical = 283 ; free virtual = 5305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2607.473 ; gain = 0.000 ; free physical = 1162 ; free virtual = 6218
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2607.473 ; gain = 0.000 ; free physical = 1161 ; free virtual = 6217
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2607.473 ; gain = 0.000 ; free physical = 1075 ; free virtual = 6139
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+WARNING: [Netlist 29-432] The IBUFG primitive 'U_clocks/clkibuf' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc]
+Finished Parsing XDC File [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cw305_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cw305_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2671.422 ; gain = 0.000 ; free physical = 940 ; free virtual = 6028
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  BUFGMUX_CTRL => BUFGCTRL (inverted pins: S0): 1 instance 
+  IBUFG => IBUF: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2671.422 ; gain = 0.000 ; free physical = 940 ; free virtual = 6028
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2671.422 ; gain = 63.949 ; free physical = 1027 ; free virtual = 6116
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tftg256-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2671.422 ; gain = 63.949 ; free physical = 1027 ; free virtual = 6116
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2671.422 ; gain = 63.949 ; free physical = 1027 ; free virtual = 6116
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2671.422 ; gain = 63.949 ; free physical = 1082 ; free virtual = 6185
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 2     
++---XORs : 
+	   2 Input    128 Bit         XORs := 2     
+	   2 Input     32 Bit         XORs := 6     
+	   2 Input      8 Bit         XORs := 90    
+	   9 Input      8 Bit         XORs := 8     
+	   8 Input      8 Bit         XORs := 8     
+	   4 Input      8 Bit         XORs := 16    
+	   2 Input      1 Bit         XORs := 1680  
+	   3 Input      1 Bit         XORs := 180   
+	   4 Input      1 Bit         XORs := 220   
+	   5 Input      1 Bit         XORs := 60    
+	   6 Input      1 Bit         XORs := 20    
++---Registers : 
+	              256 Bit    Registers := 1     
+	              128 Bit    Registers := 13    
+	               21 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 17    
++---RAMs : 
+	               1K Bit	(15 X 128 bit)          RAMs := 1     
++---Muxes : 
+	   9 Input  256 Bit        Muxes := 1     
+	   7 Input  256 Bit        Muxes := 1     
+	   2 Input  256 Bit        Muxes := 1     
+	   2 Input  128 Bit        Muxes := 18    
+	   6 Input  128 Bit        Muxes := 3     
+	   2 Input   32 Bit        Muxes := 5     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 6     
+	   5 Input    3 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 619   
+	   6 Input    1 Bit        Muxes := 2     
+	   3 Input    1 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 1     
+	   7 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design cw305_top has port led2 driven by constant 1
+WARNING: [Synth 8-3917] design cw305_top has port led3 driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2671.422 ; gain = 63.949 ; free physical = 1003 ; free virtual = 6152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2671.422 ; gain = 63.949 ; free physical = 885 ; free virtual = 6042
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2671.422 ; gain = 63.949 ; free physical = 884 ; free virtual = 6041
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2671.422 ; gain = 63.949 ; free physical = 882 ; free virtual = 6038
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2671.422 ; gain = 63.949 ; free physical = 879 ; free virtual = 6038
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2671.422 ; gain = 63.949 ; free physical = 879 ; free virtual = 6038
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2671.422 ; gain = 63.949 ; free physical = 879 ; free virtual = 6038
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2671.422 ; gain = 63.949 ; free physical = 879 ; free virtual = 6038
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2671.422 ; gain = 63.949 ; free physical = 881 ; free virtual = 6039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2671.422 ; gain = 63.949 ; free physical = 880 ; free virtual = 6039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |BUFG         |     1|
+|2     |BUFGMUX_CTRL |     1|
+|3     |CARRY4       |    13|
+|4     |LUT1         |   136|
+|5     |LUT2         |    82|
+|6     |LUT3         |   171|
+|7     |LUT4         |   582|
+|8     |LUT5         |   256|
+|9     |LUT6         |  1919|
+|10    |MUXF7        |    76|
+|11    |MUXF8        |    28|
+|12    |ODDR         |     1|
+|13    |USR_ACCESSE2 |     1|
+|14    |FDRE         |  1663|
+|15    |FDSE         |     2|
+|16    |IBUF         |    30|
+|17    |IBUFG        |     1|
+|18    |IOBUF        |     8|
+|19    |OBUF         |     6|
++------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2671.422 ; gain = 63.949 ; free physical = 880 ; free virtual = 6039
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 134 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2671.422 ; gain = 0.000 ; free physical = 934 ; free virtual = 6093
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2671.422 ; gain = 63.949 ; free physical = 934 ; free virtual = 6093
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2671.422 ; gain = 0.000 ; free physical = 1016 ; free virtual = 6180
+INFO: [Netlist 29-17] Analyzing 128 Unisim elements for replacement
+WARNING: [Netlist 29-432] The IBUFG primitive 'U_clocks/clkibuf' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2671.422 ; gain = 0.000 ; free physical = 952 ; free virtual = 6116
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  BUFGMUX_CTRL => BUFGCTRL (inverted pins: S0): 1 instance 
+  IBUFG => IBUF: 1 instance 
+  IOBUF => IOBUF (IBUF, OBUFT): 8 instances
+
+Synth Design complete, checksum: 1542d364
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 108 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:30 . Memory (MB): peak = 2671.422 ; gain = 64.031 ; free physical = 1152 ; free virtual = 6316
+INFO: [Common 17-1381] The checkpoint '/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/vivado_examples/aes128_verilog/aes128_verilog.runs/synth_100t/cw305_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file cw305_top_utilization_synth.rpt -pb cw305_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Apr  9 22:01:42 2022...

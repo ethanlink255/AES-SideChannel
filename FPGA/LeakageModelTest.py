@@ -8,7 +8,8 @@ scope.clock.adc_src = "extclk_x4"
 scope.io.hs2 = "disabled"
 
 #target = cw.target(scope, cw.targets.CW305, fpga_id='35t', force=False)
-target = cw.target(scope, cw.targets.CW305, fpga_id='100t', force=False)
+target = cw.target(scope, cw.targets.CW305, bsfile="/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/vivado_examples/aes128_verilog/aes128_verilog.runs/impl_100t/cw305_top.bit", force=True)
+
 
 target.vccint_set(1.0)
 # we only need PLL1:
@@ -28,11 +29,13 @@ target.clkusbautooff = True
 target.clksleeptime = 1
 
 scope.clock.reset_adc()
+import time
+time.sleep(0.5)
 assert (scope.clock.adc_locked), "ADC failed to lock"
 
 proj = cw.create_project("desired_path.cwp", overwrite=True)
 
-import time
+
 N_traces = 5000 # change as required
 ktp = cw.ktp.Basic()
 key, text = ktp.next()

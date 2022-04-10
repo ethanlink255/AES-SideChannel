@@ -1,0 +1,106 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Sat Apr  9 22:02:11 2022
+| Host         : ethan-ms7d18 running 64-bit Ubuntu 21.10
+| Command      : report_control_sets -verbose -file cw305_top_control_sets_placed.rpt
+| Design       : cw305_top
+| Device       : xc7a100t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    28 |
+|    Minimum number of control sets                        |    28 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    55 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    28 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     7 |
+| >= 6 to < 8        |     6 |
+| >= 8 to < 10       |     9 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     6 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             878 |          218 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              31 |           12 |
+| Yes          | No                    | No                     |             619 |          236 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             137 |           51 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+-------------------------------------+--------------------------------+------------------+----------------+--------------+
+|      Clock Signal     |            Enable Signal            |        Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------+-------------------------------------+--------------------------------+------------------+----------------+--------------+
+|  U_clocks/crypt_clk   | aes_core/tio_trigger_OBUF           | U_reg_aes/state[0]             |                1 |              4 |         4.00 |
+|  U_clocks/crypt_clk   |                                     | U_reg_aes/U_go_pulse/SR[0]     |                1 |              5 |         5.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_14   |                                |                1 |              5 |         5.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_2    |                                |                1 |              5 |         5.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_6    |                                |                1 |              5 |         5.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_9    |                                |                1 |              5 |         5.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[7]_0[0] | U_reg_aes/U_go_pulse/SR[0]     |                2 |              5 |         2.50 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_1    |                                |                4 |              6 |         1.50 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_10   |                                |                5 |              6 |         1.20 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_13   |                                |                3 |              6 |         2.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_5    |                                |                3 |              7 |         2.33 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_4    |                                |                4 |              7 |         1.75 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_0    |                                |                2 |              7 |         3.50 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_7    |                                |                2 |              8 |         4.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_8    |                                |                6 |              8 |         1.33 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_3    |                                |                2 |              8 |         4.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_12   |                                |                6 |              8 |         1.33 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_15   |                                |                2 |              8 |         4.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_11   |                                |                6 |              8 |         1.33 |
+|  U_clocks/usb_clk_buf |                                     | U_usb_reg_fe/reg_read_reg_0[0] |                5 |              8 |         1.60 |
+|  U_clocks/usb_clk_buf |                                     | U_reg_aes/U_go_pulse/SR[0]     |                3 |              9 |         3.00 |
+|  U_clocks/crypt_clk   |                                     | U_reg_aes/state[0]             |                3 |              9 |         3.00 |
+|  U_clocks/crypt_clk   | aes_core/busy_o_reg_0[0]            |                                |               38 |            128 |         3.37 |
+|  U_clocks/crypt_clk   | U_reg_aes/U_go_pulse/E[0]           |                                |               47 |            128 |         2.72 |
+|  U_clocks/crypt_clk   | aes_core/data_o[127]_i_1_n_0        | U_reg_aes/state[0]             |               48 |            128 |         2.67 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_wrn_r_reg_0[0]     |                                |              102 |            256 |         2.51 |
+|  U_clocks/usb_clk_buf |                                     |                                |               99 |            338 |         3.41 |
+|  U_clocks/crypt_clk   |                                     |                                |              119 |            540 |         4.54 |
++-----------------------+-------------------------------------+--------------------------------+------------------+----------------+--------------+
+
+

@@ -29,7 +29,7 @@ target.pll.pll_outenable_set(False, 0)
 target.pll.pll_outenable_set(True, 1)
 target.pll.pll_outenable_set(False, 2)
 
-target.pll.pll_outfreq_set(10E6, 1)
+target.pll.pll_outfreq_set(10E4, 1)
 
 target.clkusbautooff = True
 target.clksleeptime = 1
