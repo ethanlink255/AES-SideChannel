@@ -32,6 +32,7 @@ set_property PACKAGE_PIN N14 [get_ports tio_clkin]
 
 ######## 40-pin GPIO Header
 set_property PACKAGE_PIN A12 [get_ports trigger_out]
+set_property PACKAGE_PIN A14 [get_ports aes_busy_out]
 
 ####### USB Connector
 

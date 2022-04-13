@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_100t" LaunchPart="xc7a100tftg256-2" LaunchTime="1649556062">
+<GenRun Id="synth_100t" LaunchPart="xc7a100tftg256-2" LaunchTime="1649815623">
   <File Type="VDS-TIMING-PB" Name="cw305_top_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="cw305_top_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="cw305_top.dcp"/>

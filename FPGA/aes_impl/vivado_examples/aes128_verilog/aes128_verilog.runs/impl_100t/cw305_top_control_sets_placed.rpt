@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Sat Apr  9 22:02:11 2022
-| Host         : ethan-ms7d18 running 64-bit Ubuntu 21.10
+| Date         : Tue Apr 12 22:08:19 2022
+| Host         : ethan-A320M-S2H running 64-bit Ubuntu 20.04.4 LTS
 | Command      : report_control_sets -verbose -file cw305_top_control_sets_placed.rpt
 | Design       : cw305_top
 | Device       : xc7a100t
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    28 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    55 |
+| Unused register locations in slices containing registers |    54 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             878 |          218 |
+| No           | No                    | No                     |             855 |          226 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              31 |           12 |
-| Yes          | No                    | No                     |             619 |          236 |
+| No           | Yes                   | No                     |              31 |           16 |
+| Yes          | No                    | No                     |             619 |          220 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             137 |           51 |
+| Yes          | Yes                   | No                     |             137 |           49 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,34 +73,34 @@ Table of Contents
 +-----------------------+-------------------------------------+--------------------------------+------------------+----------------+--------------+
 |      Clock Signal     |            Enable Signal            |        Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
 +-----------------------+-------------------------------------+--------------------------------+------------------+----------------+--------------+
-|  U_clocks/crypt_clk   | aes_core/tio_trigger_OBUF           | U_reg_aes/state[0]             |                1 |              4 |         4.00 |
-|  U_clocks/crypt_clk   |                                     | U_reg_aes/U_go_pulse/SR[0]     |                1 |              5 |         5.00 |
-|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_14   |                                |                1 |              5 |         5.00 |
-|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_2    |                                |                1 |              5 |         5.00 |
-|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_6    |                                |                1 |              5 |         5.00 |
+|  U_clocks/CLK         | aes_core/aes_busy_out_OBUF          | U_reg_aes/state[0]             |                1 |              4 |         4.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[7]_0[0] | U_reg_aes/U_go_pulse/SR[0]     |                1 |              5 |         5.00 |
+|  U_clocks/CLK         |                                     | U_reg_aes/U_go_pulse/SR[0]     |                2 |              5 |         2.50 |
 |  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_9    |                                |                1 |              5 |         5.00 |
-|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[7]_0[0] | U_reg_aes/U_go_pulse/SR[0]     |                2 |              5 |         2.50 |
-|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_1    |                                |                4 |              6 |         1.50 |
-|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_10   |                                |                5 |              6 |         1.20 |
-|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_13   |                                |                3 |              6 |         2.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_2    |                                |                2 |              5 |         2.50 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_14   |                                |                1 |              5 |         5.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_6    |                                |                1 |              5 |         5.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_13   |                                |                1 |              6 |         6.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_10   |                                |                4 |              6 |         1.50 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_1    |                                |                1 |              6 |         6.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_4    |                                |                1 |              7 |         7.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_0    |                                |                1 |              7 |         7.00 |
 |  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_5    |                                |                3 |              7 |         2.33 |
-|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_4    |                                |                4 |              7 |         1.75 |
-|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_0    |                                |                2 |              7 |         3.50 |
-|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_7    |                                |                2 |              8 |         4.00 |
-|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_8    |                                |                6 |              8 |         1.33 |
-|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_3    |                                |                2 |              8 |         4.00 |
+|  U_clocks/usb_clk_buf |                                     | U_usb_reg_fe/reg_read_reg_0[0] |                7 |              8 |         1.14 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_11   |                                |                4 |              8 |         2.00 |
 |  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_12   |                                |                6 |              8 |         1.33 |
-|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_15   |                                |                2 |              8 |         4.00 |
-|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_11   |                                |                6 |              8 |         1.33 |
-|  U_clocks/usb_clk_buf |                                     | U_usb_reg_fe/reg_read_reg_0[0] |                5 |              8 |         1.60 |
-|  U_clocks/usb_clk_buf |                                     | U_reg_aes/U_go_pulse/SR[0]     |                3 |              9 |         3.00 |
-|  U_clocks/crypt_clk   |                                     | U_reg_aes/state[0]             |                3 |              9 |         3.00 |
-|  U_clocks/crypt_clk   | aes_core/busy_o_reg_0[0]            |                                |               38 |            128 |         3.37 |
-|  U_clocks/crypt_clk   | U_reg_aes/U_go_pulse/E[0]           |                                |               47 |            128 |         2.72 |
-|  U_clocks/crypt_clk   | aes_core/data_o[127]_i_1_n_0        | U_reg_aes/state[0]             |               48 |            128 |         2.67 |
-|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_wrn_r_reg_0[0]     |                                |              102 |            256 |         2.51 |
-|  U_clocks/usb_clk_buf |                                     |                                |               99 |            338 |         3.41 |
-|  U_clocks/crypt_clk   |                                     |                                |              119 |            540 |         4.54 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_7    |                                |                2 |              8 |         4.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_15   |                                |                3 |              8 |         2.67 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_8    |                                |                2 |              8 |         4.00 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_addr_r_reg[3]_3    |                                |                1 |              8 |         8.00 |
+|  U_clocks/CLK         |                                     | U_reg_aes/state[0]             |                3 |              9 |         3.00 |
+|  U_clocks/usb_clk_buf |                                     | U_reg_aes/U_go_pulse/SR[0]     |                4 |              9 |         2.25 |
+|  U_clocks/CLK         | U_reg_aes/U_go_pulse/E[0]           |                                |               47 |            128 |         2.72 |
+|  U_clocks/CLK         | aes_core/busy_o_reg_0[0]            |                                |               39 |            128 |         3.28 |
+|  U_clocks/CLK         | aes_core/data_o[127]_i_1_n_0        | U_reg_aes/state[0]             |               47 |            128 |         2.72 |
+|  U_clocks/usb_clk_buf | U_usb_reg_fe/usb_wrn_r_reg_0[0]     |                                |              100 |            256 |         2.56 |
+|  U_clocks/usb_clk_buf |                                     |                                |              102 |            338 |         3.31 |
+|  U_clocks/CLK         |                                     |                                |              124 |            517 |         4.17 |
 +-----------------------+-------------------------------------+--------------------------------+------------------+----------------+--------------+
 
 

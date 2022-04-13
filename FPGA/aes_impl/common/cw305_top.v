@@ -65,7 +65,8 @@ module cw305_top #(
     input  wire                         tio_clkin
     
     //40 pin gpio header round trigger
-    ,output wire                         trigger_out
+    ,output wire                         trigger_out,
+    output wire                         aes_busy_out 
 
     // Block Interface to Crypto Core
 `ifdef USE_BLOCK_INTERFACE
@@ -122,7 +123,7 @@ module cw305_top #(
     //assign led2 = crypt_clk_heartbeat[22];
     assign led2 = 'b1;
     
-    assign trigger_out = crypt_clk_heartbeat[22];
+    assign trigger_out = crypt_clk;
     assign led3 = 'b1;
     
     
@@ -255,6 +256,7 @@ module cw305_top #(
        .busy_o          (aes_busy)
    );
    assign tio_trigger = aes_busy;
+   assign aes_busy_out = aes_busy;
 `endif
 
 

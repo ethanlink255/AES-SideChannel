@@ -22,7 +22,7 @@ target.pll.pll_outenable_set(False, 2)
 target.pll.pll_outsource_set("PLL0", 0)
 
 # run at 10 MHz:
-target.pll.pll_outfreq_set(10E6, 1)
+target.pll.pll_outfreq_set(10E6/2, 1)
 
 # 1ms is plenty of idling time
 target.clkusbautooff = True
@@ -36,7 +36,7 @@ assert (scope.clock.adc_locked), "ADC failed to lock"
 proj = cw.create_project("desired_path.cwp", overwrite=True)
 
 
-N_traces = 5000 # change as required
+N_traces = 100 # change as required
 ktp = cw.ktp.Basic()
 key, text = ktp.next()
 for i in range(N_traces):

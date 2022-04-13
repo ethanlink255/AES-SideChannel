@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Sat Apr  9 22:02:37 2022
-| Host         : ethan-ms7d18 running 64-bit Ubuntu 21.10
+| Date         : Tue Apr 12 22:08:35 2022
+| Host         : ethan-A320M-S2H running 64-bit Ubuntu 20.04.4 LTS
 | Command      : report_methodology -file cw305_top_methodology_drc_routed.rpt -pb cw305_top_methodology_drc_routed.pb -rpx cw305_top_methodology_drc_routed.rpx
 | Design       : cw305_top
 | Device       : xc7a100tftg256-2
@@ -72,350 +72,350 @@ Related violations: <none>
 
 TIMING-18#4 Warning
 Missing input or output delay  
-An output delay is missing on trigger_out relative to clock(s) tio_clkin
+An output delay is missing on aes_busy_out relative to clock(s) tio_clkin
 Related violations: <none>
 
 XDCH-2#1 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.000 ns has been defined on port 'j16_sel' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 0.000 [get_ports j16_sel]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 94)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 95)
 Related violations: <none>
 
 XDCH-2#2 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.000 ns has been defined on port 'k16_sel' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 0.000 [get_ports k16_sel]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 95)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 96)
 Related violations: <none>
 
 XDCH-2#3 Warning
 Same min and max delay values on IO port  
 The same input delay of 0.500 ns has been defined on port 'pushbutton' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock [get_clocks usb_clk] -add_delay 0.500 [get_ports pushbutton]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 96)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 97)
 Related violations: <none>
 
 XDCH-2#4 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[0]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#5 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[10]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#6 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[11]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#7 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[12]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#8 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[13]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#9 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[14]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#10 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[15]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#11 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[16]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#12 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[17]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#13 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[18]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#14 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[19]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#15 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[1]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#16 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[20]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#17 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[2]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#18 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[3]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#19 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[4]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#20 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[5]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#21 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[6]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#22 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[7]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#23 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[8]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#24 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_addr[9]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 87)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
 Related violations: <none>
 
 XDCH-2#25 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_cen' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_cen]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 90)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 91)
 Related violations: <none>
 
 XDCH-2#26 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_data[0]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 89)
 Related violations: <none>
 
 XDCH-2#27 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_data[1]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 89)
 Related violations: <none>
 
 XDCH-2#28 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_data[2]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 89)
 Related violations: <none>
 
 XDCH-2#29 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_data[3]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 89)
 Related violations: <none>
 
 XDCH-2#30 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_data[4]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 89)
 Related violations: <none>
 
 XDCH-2#31 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_data[5]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 89)
 Related violations: <none>
 
 XDCH-2#32 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_data[6]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 89)
 Related violations: <none>
 
 XDCH-2#33 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_data[7]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 88)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 89)
 Related violations: <none>
 
 XDCH-2#34 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_rdn' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_rdn]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 91)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 92)
 Related violations: <none>
 
 XDCH-2#35 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_trigger' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_trigger]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 89)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 90)
 Related violations: <none>
 
 XDCH-2#36 Warning
 Same min and max delay values on IO port  
 The same input delay of 2.000 ns has been defined on port 'usb_wrn' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_wrn]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 92)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 93)
 Related violations: <none>
 
 XDCH-2#37 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.000 ns has been defined on port 'led1' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock usb_clk 0.000 [get_ports led1]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 98)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 99)
 Related violations: <none>
 
 XDCH-2#38 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.000 ns has been defined on port 'led2' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock usb_clk 0.000 [get_ports led2]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 99)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 100)
 Related violations: <none>
 
 XDCH-2#39 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.000 ns has been defined on port 'led3' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock usb_clk 0.000 [get_ports led3]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 100)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 101)
 Related violations: <none>
 
 XDCH-2#40 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.000 ns has been defined on port 'tio_clkout' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock usb_clk 0.000 [get_ports tio_clkout]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 103)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 104)
 Related violations: <none>
 
 XDCH-2#41 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.000 ns has been defined on port 'tio_trigger' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock usb_clk 0.000 [get_ports tio_trigger]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 102)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 103)
 Related violations: <none>
 
 XDCH-2#42 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.000 ns has been defined on port 'usb_data[0]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 101)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 102)
 Related violations: <none>
 
 XDCH-2#43 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.000 ns has been defined on port 'usb_data[1]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 101)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 102)
 Related violations: <none>
 
 XDCH-2#44 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.000 ns has been defined on port 'usb_data[2]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 101)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 102)
 Related violations: <none>
 
 XDCH-2#45 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.000 ns has been defined on port 'usb_data[3]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 101)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 102)
 Related violations: <none>
 
 XDCH-2#46 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.000 ns has been defined on port 'usb_data[4]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 101)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 102)
 Related violations: <none>
 
 XDCH-2#47 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.000 ns has been defined on port 'usb_data[5]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 101)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 102)
 Related violations: <none>
 
 XDCH-2#48 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.000 ns has been defined on port 'usb_data[6]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 101)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 102)
 Related violations: <none>
 
 XDCH-2#49 Warning
 Same min and max delay values on IO port  
 The same output delay of 0.000 ns has been defined on port 'usb_data[7]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
 set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
-/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 101)
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_main.xdc (Line: 102)
 Related violations: <none>
 
 

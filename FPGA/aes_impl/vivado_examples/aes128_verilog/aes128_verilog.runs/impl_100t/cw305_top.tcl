@@ -123,7 +123,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param chipscope.maxJobs 4
+  set_param chipscope.maxJobs 1
   open_checkpoint cw305_top_routed.dcp
   set_property webtalk.parent_dir /home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/vivado_examples/aes128_verilog/aes128_verilog.cache/wt [current_project]
 set_property TOP cw305_top [current_fileset]

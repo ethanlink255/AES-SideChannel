@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Sat Apr  9 22:02:39 2022
-| Host         : ethan-ms7d18 running 64-bit Ubuntu 21.10
+| Date         : Tue Apr 12 22:08:36 2022
+| Host         : ethan-A320M-S2H running 64-bit Ubuntu 20.04.4 LTS
 | Command      : report_bus_skew -warn_on_violation -file cw305_top_bus_skew_routed.rpt -pb cw305_top_bus_skew_routed.pb -rpx cw305_top_bus_skew_routed.rpx
 | Design       : cw305_top
 | Device       : 7a100t-ftg256

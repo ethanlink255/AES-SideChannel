@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date             : Sat Apr  9 22:02:38 2022
-| Host             : ethan-ms7d18 running 64-bit Ubuntu 21.10
+| Date             : Tue Apr 12 22:08:36 2022
+| Host             : ethan-A320M-S2H running 64-bit Ubuntu 20.04.4 LTS
 | Command          : report_power -file cw305_top_power_routed.rpt -pb cw305_top_power_summary_routed.pb -rpx cw305_top_power_routed.rpx
 | Design           : cw305_top
 | Device           : xc7a100tftg256-2
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.177        |
+| Total On-Chip Power (W)  | 0.189        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.079        |
+| Dynamic (W)              | 0.092        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 84.2         |
-| Junction Temperature (C) | 25.8         |
+| Max Ambient (C)          | 84.1         |
+| Junction Temperature (C) | 25.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.009 |        5 |       --- |             --- |
-| Slice Logic    |     0.031 |     4815 |       --- |             --- |
+| Clocks         |     0.010 |        5 |       --- |             --- |
+| Slice Logic    |     0.032 |     4785 |       --- |             --- |
 |   LUT as Logic |     0.031 |     2796 |     63400 |            4.41 |
-|   Register     |    <0.001 |     1665 |    126800 |            1.31 |
+|   Register     |    <0.001 |     1642 |    126800 |            1.29 |
 |   F7/F8 Muxes  |    <0.001 |      104 |     63400 |            0.16 |
-|   CARRY4       |    <0.001 |       13 |     15850 |            0.08 |
+|   CARRY4       |    <0.001 |        7 |     15850 |            0.04 |
 |   Others       |     0.000 |       16 |       --- |             --- |
-| Signals        |     0.031 |     3924 |       --- |             --- |
-| I/O            |     0.008 |       45 |       170 |           26.47 |
+| Signals        |     0.030 |     3899 |       --- |             --- |
+| I/O            |     0.020 |       46 |       170 |           27.06 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.177 |          |           |                 |
+| Total          |     0.189 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.087 |       0.071 |      0.015 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.088 |       0.072 |      0.015 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.009 |       0.005 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -143,12 +143,12 @@ Table of Contents
 +----------------+-----------+
 | Name           | Power (W) |
 +----------------+-----------+
-| cw305_top      |     0.079 |
+| cw305_top      |     0.092 |
 |   U_reg_aes    |     0.011 |
 |     U_go_pulse |     0.003 |
 |   U_usb_reg_fe |     0.002 |
 |   aes_core     |     0.058 |
-|     ks_inst    |     0.024 |
+|     ks_inst    |     0.025 |
 +----------------+-----------+
 
 
