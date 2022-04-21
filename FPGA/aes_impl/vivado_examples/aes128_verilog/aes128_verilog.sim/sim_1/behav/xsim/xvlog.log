@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cdc_pulse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cdc_pulse
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/clocks.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clocks
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_reg_aes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cw305_reg_aes
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_usb_reg_fe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cw305_usb_reg_fe
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cw305_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/vivado_examples/aes128_verilog/aes128_verilog.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

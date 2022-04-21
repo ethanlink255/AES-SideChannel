@@ -1,0 +1,24 @@
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /mnt/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot cw305_top_behav xil_defaultlib.cw305_top xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cw305_usb_reg_fe
+Compiling module xil_defaultlib.cdc_pulse
+Compiling module unisims_ver.USR_ACCESSE2
+Compiling module xil_defaultlib.cw305_reg_aes
+Compiling module unisims_ver.BUFGCTRL(PRESELECT_I0="TRUE")
+Compiling module unisims_ver.BUFGMUX_CTRL
+Compiling module unisims_ver.ODDR
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.IBUFG
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clocks
+Compiling module xil_defaultlib.cw305_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cw305_top_behav

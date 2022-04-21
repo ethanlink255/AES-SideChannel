@@ -1,0 +1,11 @@
+0.7
+2020.2
+Oct 19 2021
+02:56:52
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cdc_pulse.v,1649306354,verilog,,/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/clocks.v,,cdc_pulse,,,../../../../../../common;../../../../aes128_verilog.srcs/sources_1/new,,,,,
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/clocks.v,1649306354,verilog,,/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_reg_aes.v,,clocks,,,../../../../../../common;../../../../aes128_verilog.srcs/sources_1/new,,,,,
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_defines.v,1649306354,verilog,,,,,,,,,,,,
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_reg_aes.v,1649306354,verilog,,/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_usb_reg_fe.v,/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_defines.v,cw305_reg_aes,,,../../../../../../common;../../../../aes128_verilog.srcs/sources_1/new,,,,,
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_top.v,1650033512,verilog,,,,cw305_top,,,../../../../../../common;../../../../aes128_verilog.srcs/sources_1/new,,,,,
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_usb_reg_fe.v,1649306354,verilog,,/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/common/cw305_top.v,,cw305_usb_reg_fe,,,../../../../../../common;../../../../aes128_verilog.srcs/sources_1/new,,,,,
+/home/ethan/Documents/Git/CWHardwareHackingExporation/FPGA/aes_impl/vivado_examples/aes128_verilog/aes128_verilog.sim/sim_1/behav/xsim/glbl.v,1634335545,verilog,,,,glbl,,,,,,,,

@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  -i "../../../../aes128_verilog.srcs/sources_1/new" -i "../../../../../../common" \
+"../../../../../../common/cdc_pulse.v" \
+"../../../../../../common/clocks.v" \
+"../../../../../../common/cw305_reg_aes.v" \
+"../../../../../../common/cw305_usb_reg_fe.v" \
+"../../../../../../common/cw305_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

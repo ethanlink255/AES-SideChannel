@@ -21,7 +21,7 @@ target.pll.pll_outenable_set(False, 2)
 """
 target.pll.pll_outsource_set("PLL0", 0)
 
-# run at 10 MHz:
+# run at 5 MHz:
 target.pll.pll_outfreq_set(10E6/2, 1)
 
 # 1ms is plenty of idling time
