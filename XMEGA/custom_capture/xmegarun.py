@@ -28,7 +28,7 @@ key, msg = ktp.next()
 target.set_key(key)
 scope.arm()
 print(":(")
-for i in range(20):
+for i in range(50):
     target.simpleserial_write('p', msg)
 
     print(target.simpleserial_read('r', 16))
