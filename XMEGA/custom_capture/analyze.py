@@ -12,7 +12,7 @@ parser.add_argument("-a", "--auto-bounding", help="Enables autobounding, will in
 parser.add_argument("-l", "--lower-bound", help="Lower Bound for AES operation")
 parser.add_argument("-u", "--upper-bound", help="Upper Bound for AES operation")
 parser.add_argument("-d", "--downsample-factor", 
-     help="Downscaling factor, higher value will result in quicker processing, but less accurate results", default=3)
+     help="Downscaling factor, higher value will result in quicker processing, but less accurate results", type=int, default=3)
 
 
 args = parser.parse_args()
