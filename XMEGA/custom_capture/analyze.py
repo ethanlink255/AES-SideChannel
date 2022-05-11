@@ -1,4 +1,4 @@
-#!python3
+#!/bin/python3
 import string
 import numpy as np
 from math import ceil
