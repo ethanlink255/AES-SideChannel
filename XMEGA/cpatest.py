@@ -1,6 +1,5 @@
 import matplotlib.pylab as plt
 import chipwhisperer as cw
-from tqdm import tnrange
 import numpy as np
 import time
 
@@ -28,6 +27,10 @@ print(scope.clock.adc_freq)
 print(scope.adc.decimate)
 print(scope.adc.offset)
 print(scope.trigger.triggers)
+#cw.program_target(scope, cw.programmers.XMEGAProgrammer, "/home/ethan/Documents/Git/chipwhisperer/hardware/victims/firmware/simpleserial-aes/simpleserial-aes-CW303.hex")
+
+proj = cw.create_project("icaptest", overwrite=True)
+
 ktp = cw.ktp.Basic()
 trace_array = []
 textin_array = []
@@ -37,29 +40,41 @@ key, text = ktp.next()
 target.set_key(key)
 
 N = 50
-for i in tnrange(N, desc='Capturing traces'):
+for i in range(0, 50):
     scope.arm()
     
-    target.simpleserial_write('p', text)
+    #target.simpleserial_write('p', text)
     
-    ret = scope.capture()
-    if ret:
+    trace = cw.capture_trace(scope, target, text, key)
+    if not trace:
         print("Target timed out!")
         continue
     
-    response = target.simpleserial_read('r', 16)
+    #response = target.simpleserial_read('r', 16)
     
-    trace_array.append(scope.get_last_trace())
+    proj.traces.append(trace)
     textin_array.append(text)
     
-    key, text = ktp.next()
+    _, text = ktp.next()
     
-trace_array = np.array(trace_array)
-print(len(trace_array))
-print(len(trace_array[0]))
+#trace_array = np.array(trace_array)
+#print(len(trace_array))
+#print(len(trace_array[0]))
 
 
-plt.figure()
-plt.plot(trace_array[0], 'r')
-plt.plot(trace_array[1], 'g')
-plt.show()
+#plt.figure()
+#plt.plot(trace_array[0], 'r')
+##plt.plot(trace_array[1], 'g')
+#plt.show()
+
+print(key)
+
+import chipwhisperer.analyzer as cwa
+leak_model = cwa.leakage_models.sbox_output
+print("Attack Starting")
+attack = cwa.cpa(proj, leak_model)
+results = attack.run()
+
+res = results.key_guess()
+for r in res:
+    print(hex(r), end=',')
