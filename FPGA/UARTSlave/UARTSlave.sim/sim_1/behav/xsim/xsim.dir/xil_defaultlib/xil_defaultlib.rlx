@@ -1,0 +1,7 @@
+0.7
+2020.2
+Oct 19 2021
+02:56:52
+/home/ethan/Documents/UARTSlave/UARTSlave.sim/sim_1/behav/xsim/glbl.v,1660619012,verilog,,,,glbl,,,,,,,,
+/home/ethan/Documents/UARTSlave/UARTSlave.srcs/sim_1/new/uart_traffic.v,1661118026,verilog,,,,uart_traffic,,,,,,,,
+/home/ethan/Documents/UARTSlave/UARTSlave.srcs/sources_1/new/wrapper_d.v,1661130569,verilog,,/home/ethan/Documents/UARTSlave/UARTSlave.srcs/sim_1/new/uart_traffic.v,,wrapper_d,,,,,,,,

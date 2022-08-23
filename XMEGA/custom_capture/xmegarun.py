@@ -42,7 +42,7 @@ key, msg = ktp.next()
 
 scope.arm()
 print(":(")
-for i in range(200):
+for i in range(950):
     keyarr.append(key)
     ptext.append(msg)
 

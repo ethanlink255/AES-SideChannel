@@ -39,7 +39,7 @@ cparr = pickle.load(open("save.p", "rb"))
 print(args.directory)
 
 cwave = 0
-for ccap in os.listdir(args.directory):
+for ccap in sorted(os.listdir(args.directory)):
     fn = open(args.directory + ccap, 'r')
 
     lower_bound = None 
@@ -62,7 +62,7 @@ for ccap in os.listdir(args.directory):
         upper_bound = args.upper_bound
 
     dsample_factor = args.downsample_factor
-    upper_bound = lower_bound + 4500
+    upper_bound = lower_bound + 5500
     #trig_array = np.empty(ceil((upper_bound - lower_bound)/dsample_factor) + 2)
     power_trace = np.empty(ceil((upper_bound - lower_bound)/dsample_factor) + 2)
 
@@ -90,8 +90,10 @@ for ccap in os.listdir(args.directory):
                 c_trace+=1
                 power_trace[c_trace] = x.split(',')[2]
 
+    print(cparr.key[cwave])
     proj.traces.append(cw.Trace(power_trace, cparr.ptext[cwave], cparr.ctext[cwave], cparr.key[cwave]))
     cwave += 1
+    
 
 proj.save()
 
@@ -108,11 +110,14 @@ import chipwhisperer.analyzer as cwa
 leak_model = cwa.leakage_models.sbox_output
 print("Attack Starting")
 attack = cwa.cpa(proj, leak_model)
+
 results = attack.run()
 
-res = results.key_guess()
-for r in res:
-    print(hex(r), end=',')
+res = results.best_guesses()
+print(res)
+
+for r in results.key_guess():
+   print(hex(r), end=',')
 
 print()
 

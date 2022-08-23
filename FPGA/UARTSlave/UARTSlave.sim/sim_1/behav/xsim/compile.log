@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ethan/Documents/UARTSlave/UARTSlave.srcs/sources_1/new/wrapper_d.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wrapper_d
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ethan/Documents/UARTSlave/UARTSlave.srcs/sim_1/new/uart_traffic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_traffic
