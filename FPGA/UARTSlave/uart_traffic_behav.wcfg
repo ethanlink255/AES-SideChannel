@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="22.091666 us"></ZoomStartTime>
-      <ZoomEndTime time="43.581667 us"></ZoomEndTime>
-      <Cursor1Time time="40.000000 us"></Cursor1Time>
+      <ZoomStartTime time="0.024609 us"></ZoomStartTime>
+      <ZoomEndTime time="107.674610 us"></ZoomEndTime>
+      <Cursor1Time time="49.874609 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="29" />
+   <WVObjectSize size="31" />
    <wvobject type="logic" fp_name="/uart_traffic/CLK">
       <obj_property name="ElementShortName">CLK</obj_property>
       <obj_property name="ObjectShortName">CLK</obj_property>
@@ -49,12 +49,12 @@
       <obj_property name="ObjectShortName">tx</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/uart_traffic/pointer">
-      <obj_property name="ElementShortName">pointer[6:0]</obj_property>
-      <obj_property name="ObjectShortName">pointer[6:0]</obj_property>
+      <obj_property name="ElementShortName">pointer[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pointer[7:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/uart_traffic/pointer2">
-      <obj_property name="ElementShortName">pointer2[6:0]</obj_property>
-      <obj_property name="ObjectShortName">pointer2[6:0]</obj_property>
+      <obj_property name="ElementShortName">pointer2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pointer2[7:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/uart_traffic/trans">
       <obj_property name="ElementShortName">trans</obj_property>
@@ -125,15 +125,23 @@
       <obj_property name="ObjectShortName">c_block_buf[127:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/uart_traffic/test_d/p_pointer">
-      <obj_property name="ElementShortName">p_pointer[6:0]</obj_property>
-      <obj_property name="ObjectShortName">p_pointer[6:0]</obj_property>
+      <obj_property name="ElementShortName">p_pointer[7:0]</obj_property>
+      <obj_property name="ObjectShortName">p_pointer[7:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/uart_traffic/test_d/k_pointer">
-      <obj_property name="ElementShortName">k_pointer[6:0]</obj_property>
-      <obj_property name="ObjectShortName">k_pointer[6:0]</obj_property>
+      <obj_property name="ElementShortName">k_pointer[7:0]</obj_property>
+      <obj_property name="ObjectShortName">k_pointer[7:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/uart_traffic/test_d/idle">
       <obj_property name="ElementShortName">idle</obj_property>
       <obj_property name="ObjectShortName">idle</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/uart_traffic/rc_text">
+      <obj_property name="ElementShortName">rc_text[127:0]</obj_property>
+      <obj_property name="ObjectShortName">rc_text[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/uart_traffic/rp_text">
+      <obj_property name="ElementShortName">rp_text[127:0]</obj_property>
+      <obj_property name="ObjectShortName">rp_text[127:0]</obj_property>
    </wvobject>
 </wave_config>

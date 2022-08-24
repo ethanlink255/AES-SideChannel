@@ -56,7 +56,19 @@ module uart_traffic(
    reg complete = 0;
    reg [3:0] counter;
    reg [4:0] init;
-  
+   
+   reg s_trans;
+   
+   reg recieving = 0;
+   reg [7:0] recv_data = 0;
+   reg [2:0] recv_c = 0;
+   
+   reg [127:0] rc_text = 0;
+   reg [7:0] rc_pointer = 0;
+   
+   reg [127:0] rp_text = 'b10000000;
+   reg [7:0] rp_pointer = 'b10000000;
+    
    initial begin
     tx <= 1;
     counter <= 0;
@@ -71,7 +83,7 @@ module uart_traffic(
                 counter <= 0;
             end
             else begin
-                if(counter != 'b1000) begin
+                if(counter != 'b111) begin
                     if(pointer != 'b10000000) begin
                         tx <= c_text[pointer];
                         pointer = pointer + 1;
@@ -85,6 +97,8 @@ module uart_traffic(
                          end 
                          else begin
                             complete <= 1;
+                            tx <= 1;
+                            trans <= 0;
                          end
                     end
                 end
@@ -100,6 +114,39 @@ module uart_traffic(
             init = init + 1;
             
         end
+        
+        if(!recieving) begin
+            if(rx <= 0) 
+                recieving <= 1;
+            
+        end    
+        else begin
+            if(recv_c != 'b111) begin
+                recv_data[recv_c] <= rx;
+                
+                if(rc_pointer != 0) begin
+                    rc_text[rc_pointer] <= recv_data[recv_c];
+                    rc_pointer = rc_pointer - 1;
+                end else begin
+                    if(rp_pointer != 0) begin
+                        rp_text[rp_pointer] <= recv_data[recv_c];
+                        rp_pointer = rp_pointer - 1;
+                    end            
+                end
+                
+                if(rc_pointer == 0 && rp_pointer == 0) begin
+                    rp_pointer <= 'b10000000;
+                    rc_pointer <= 'b10000000;
+                end
+                
+                recv_c = recv_c + 1;
+            end 
+            else begin
+                recieving <= 0;
+                recv_c <= 0;
+            end
+        end
+        
    end
 
     wrapper_d test_d(

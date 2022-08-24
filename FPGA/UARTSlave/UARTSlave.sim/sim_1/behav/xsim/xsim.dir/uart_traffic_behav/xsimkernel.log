@@ -1,4 +1,4 @@
-Running: xsim.dir/uart_traffic_behav/xsimk -simmode gui -wdb uart_traffic_behav.wdb -simrunnum 0 -socket 43975
+Running: xsim.dir/uart_traffic_behav/xsimk -simmode gui -wdb uart_traffic_behav.wdb -simrunnum 0 -socket 41701
 Design successfully loaded
-Design Loading Memory Usage: 33036 KB (Peak: 33652 KB)
+Design Loading Memory Usage: 33040 KB (Peak: 33652 KB)
 Design Loading CPU Usage: 20 ms

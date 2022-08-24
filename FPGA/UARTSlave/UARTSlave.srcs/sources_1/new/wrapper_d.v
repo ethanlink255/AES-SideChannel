@@ -35,6 +35,9 @@ module wrapper_d
     );
     
     reg [9:0] counter = 0;
+    reg [9:0] clk_counter = 0;
+    
+    
     reg [2:0] trans = 0;
     
     reg [127:0] p_block_buf;
@@ -44,6 +47,8 @@ module wrapper_d
     reg [7:0] p_pointer = 0;
     reg [7:0] k_pointer = 0;
     reg idle = 0;
+    
+    
     
     initial begin
         tx <= 1;
@@ -102,7 +107,8 @@ module wrapper_d
                 end
                 else begin
                     counter <= 0;
-                    trans <= 0;             
+                    trans <= 0;
+                    idle <= 1;             
                 end
             
             end
@@ -112,7 +118,6 @@ module wrapper_d
             if(counter == 'b111) begin
                 tx <= 1;
                 counter <= 0;
-                idle <= 1;
             end
         end
         
@@ -124,14 +129,14 @@ module wrapper_d
     end
     
     always @(posedge clk) begin
-        if(counter == 90) begin
+        if(clk_counter == 90) begin
             c_block_buf <= c_block;
             trans[2] <= 1;
             trans[1] <= 0;
             counter <= 0;
         end
         if(trans[1]) begin
-            counter = counter + 1;
+            clk_counter = clk_counter + 1;
         end     
     end
     
